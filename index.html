@@ -3,70 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Material Portal</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <title>Rohit Mech - File Sharing Platform</title>
   <style>
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .card-hover {
-      transition: transform 0.3s ease;
+    .header {
+      text-align: center;
+      padding: 20px 0;
     }
-    .card-hover:hover {
-      transform: translateY(-5px);
+    .content {
+      margin-top: 20px;
     }
-    .nav-link {
-      position: relative;
-      transition: color 0.3s ease;
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px 0;
     }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -2px;
-      left: 0;
-      background-color: #fff;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover::after {
-      width: 100%;
+    .button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
-<body class="gradient-bg min-h-screen text-white">
-  <div class="container mx-auto px-4 py-8">
-    <header class="text-center py-12 animate__animated animate__fadeIn">
-      <h1 class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-100">
-        Welcome to Study Material Portal
-      </h1>
-      <p class="text-xl text-gray-200 mb-8">Your one-stop solution for educational resources</p>
-      <nav class="flex justify-center space-x-8">
-        <a href="/admin.html" class="nav-link text-xl px-6 py-2 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20">
-          Admin Panel
-        </a>
-        <a href="/download.html" class="nav-link text-xl px-6 py-2 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20">
-          Download Materials
-        </a>
-      </nav>
-    </header>
-
-    <main class="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      <div class="card-hover bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-lg animate__animated animate__fadeInLeft">
-        <h2 class="text-2xl font-bold mb-4">For Students</h2>
-        <p class="text-gray-200">Access a wide range of study materials, lecture notes, and resources to enhance your learning experience.</p>
-      </div>
-      <div class="card-hover bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-lg animate__animated animate__fadeInRight">
-        <h2 class="text-2xl font-bold mb-4">For Administrators</h2>
-        <p class="text-gray-200">Manage and organize study materials efficiently with our powerful admin tools.</p>
-      </div>
-    </main>
-
-    <footer class="text-center mt-20 text-sm text-gray-300">
-      <p class="mb-2">&copy; 2025 Rohit Majage</p>
-      <p class="text-yellow-300">Email: rohitmajage1@gmail.com</p>
-    </footer>
+<body>
+  <div class="header">
+    <h1>Welcome to Rohit Mech</h1>
+    <p>File Sharing Platform</p>
+  </div>
+  <div class="content">
+    <h2>About</h2>
+    <p>This is a file sharing platform where you can upload and download various document types including PDF, DOC, DOCX, PPT, and PPTX files.</p>
+    
+    <h2>Quick Links</h2>
+    <a href="download.html" class="button">Download Files</a>
+    <a href="admin.html" class="button">Admin Panel</a>
   </div>
 </body>
 </html> 

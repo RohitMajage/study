@@ -2,8 +2,10 @@ from flask import Flask, request, send_from_directory, jsonify
 import os
 from datetime import datetime
 from werkzeug.utils import secure_filename
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Create uploads directory if it doesn't exist
 if not os.path.exists('uploads'):
@@ -49,14 +51,18 @@ def list_files():
 @app.route('/upload', methods=['POST'])
 def upload_file():
     try:
+        print("Upload request received")  # Debug log
         if 'file' not in request.files:
+            print("No file part in request")  # Debug log
             return jsonify({'error': 'No file part'}), 400
         
         file = request.files['file']
         if file.filename == '':
+            print("No selected file")  # Debug log
             return jsonify({'error': 'No selected file'}), 400
         
         if not allowed_file(file.filename):
+            print(f"Invalid file type: {file.filename}")  # Debug log
             return jsonify({'error': 'File type not allowed. Please upload only PDF, DOC, DOCX, PPT, or PPTX files'}), 400
         
         filename = secure_filename(file.filename)
@@ -64,11 +70,14 @@ def upload_file():
         
         # Check if file already exists
         if os.path.exists(file_path):
+            print(f"File already exists: {filename}")  # Debug log
             return jsonify({'error': 'A file with this name already exists'}), 400
         
         file.save(file_path)
+        print(f"File saved successfully: {filename}")  # Debug log
         return jsonify({'message': 'File uploaded successfully'})
     except Exception as e:
+        print(f"Error during upload: {str(e)}")  # Debug log
         return jsonify({'error': str(e)}), 500
 
 @app.route('/logs')
@@ -87,4 +96,4 @@ def delete_file(filename):
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000) 
+    app.run(debug=True, port=8000, host='0.0.0.0') 

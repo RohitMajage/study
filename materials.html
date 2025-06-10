@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials - Study Material Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center py-8">
+            <h1 class="text-4xl font-bold mb-4">Study Materials</h1>
+            <a href="index.html" class="text-yellow-300 hover:text-yellow-200">← Back to Home</a>
+        </header>
+
+        <main class="mt-12 max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Sample Materials - You can add more as needed -->
+                <div class="card-hover bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg">
+                    <h2 class="text-xl font-bold mb-3">Mathematics</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Calculus Notes</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Linear Algebra</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Statistics</a></li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg">
+                    <h2 class="text-xl font-bold mb-3">Physics</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Mechanics</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Electromagnetism</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Quantum Physics</a></li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg">
+                    <h2 class="text-xl font-bold mb-3">Computer Science</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Programming</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Data Structures</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Algorithms</a></li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg">
+                    <h2 class="text-xl font-bold mb-3">Engineering</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Mechanical</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Electrical</a></li>
+                        <li><a href="#" class="text-blue-300 hover:text-blue-200">Civil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center mt-20 text-sm text-gray-300">
+            <p class="mb-2">&copy; 2025 Rohit Majage</p>
+            <p class="text-yellow-300">Email: rohitmajage1@gmail.com</p>
+        </footer>
+    </div>
+</body>
+</html> 
